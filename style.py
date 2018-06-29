@@ -3,7 +3,6 @@ from pygments.token import Token
 
 class NightOwl(Style):
   background_color = '#011627'
-  default_style = ''
   styles = {
     Token: '#d6deeb',
     Token.Keyword: 'italic #c792ea',
