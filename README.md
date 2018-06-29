@@ -1,6 +1,6 @@
 # Night Owl Pygments
 
-An early, poorly tested adaptation of
+An early, partially tested adaptation of
 [Sarah Drasner's Night Owl](https://github.com/sdras/night-owl-vscode-theme)
 [Visual Studio Code](https://code.visualstudio.com)
 theme to [pygments](http://pygments.org/).
