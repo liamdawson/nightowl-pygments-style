@@ -11,19 +11,11 @@ install:
   - pip install pipenv
   - pipenv install
 
-script:
-  - 
-  - cat nightowl-pygments.css
-
-jobs:
-  include:
-    - script: python to_css.py > nightowl-pygments-$TRAVIS_BRANCH.css
-    - stage: GitHub Release
-      script: echo "Deploying to GitHub releases ..."
-      deploy:
-        file: "nightowl-pygments-$TRAVIS_BRANCH.css"
-        provider: releases
-        api_key: $GITHUB_OAUTH_TOKEN
-        skip_cleanup: true
-        on:
-          tags: true
+script: python to_css.py > nightowl-pygments-$TRAVIS_BRANCH.css
+deploy:
+  file: nightowl-pygments-$TRAVIS_BRANCH.css
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
