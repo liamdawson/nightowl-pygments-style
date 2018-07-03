@@ -13,3 +13,4 @@ install:
 
 script:
   - python to_css.py > nightowl-pygments.css
+  - cat nightowl-pygments.css
