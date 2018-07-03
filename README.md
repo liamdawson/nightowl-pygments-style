@@ -5,8 +5,8 @@ An early, partially tested adaptation of
 [Visual Studio Code](https://code.visualstudio.com)
 theme to [pygments](http://pygments.org/).
 
-Unfortunately, due to differences between lexers, it seems impossible to
-perfectly replicate the style achieved in the reference theme.
+Due to differences between lexers, it seems impossible to exactly replicate the
+style achieved in the VS Code theme.
 
 ## Rationale
 
@@ -14,6 +14,7 @@ perfectly replicate the style achieved in the reference theme.
 compatible code formatter, which supports using compatible CSS stylesheets for
 syntax highlighting colours. Using `to_css.py` in this repository will generate
 one of these stylesheets based on the current implementation of the theme.
+Prebuilt CSS releases are also available as releases, for tagged versions.
 
 ## Development
 
@@ -32,3 +33,9 @@ with the official theme.
    lexer.
 4. Open a PR once `style.py` is to your liking (being careful to check for
    regressions for other samples).
+
+### Particularly welcome ideas
+
+* A cleaner test/comparison experience.
+* More comparison cases.
+* Ideal packaging for the style for use with Pygments.
