@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.3'
+
+cache:
+  directories:
+  - $HOME/.cache/pip
+  - $HOME/.cache/pipenv
+
+install:
+  - pipenv install
+
+script:
+  - python to_css.py > nightowl-pygments.css
