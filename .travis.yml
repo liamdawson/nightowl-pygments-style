@@ -8,6 +8,7 @@ cache:
   - $HOME/.cache/pipenv
 
 install:
+  - pip install pipenv
   - pipenv install
 
 script:
