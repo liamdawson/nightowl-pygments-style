@@ -1,21 +1,21 @@
 language: python
 python:
 - '3.3'
-
 cache:
   directories:
-  - $HOME/.cache/pip
-  - $HOME/.cache/pipenv
-
+  - "$HOME/.cache/pip"
+  - "$HOME/.cache/pipenv"
 install:
   - pip install pipenv
   - pipenv install
 
 script: python to_css.py > nightowl-pygments-$TRAVIS_BRANCH.css
+
 deploy:
   file: nightowl-pygments-$TRAVIS_BRANCH.css
   provider: releases
-  api_key: $GITHUB_OAUTH_TOKEN
+  api_key:
+    secure: Zd75poN0l54FhCpM1/N9kQ+jLpt0EBZlwD+S5nSAxOiF1gBj8sbNrFKGG8a9BXLi+GawLoSvfk48x1R9ImeC84gOMlegHQJ7PSHcQp2i+1ePkalbI8fbw8/spVn8SST2ACrdY8qo2tuuWCOTbSegveekvGNuGkpVof/Twx5fFpJapERBKnwScwoUJU6rVxNJ7fOGQQ4QhkIX8aJPrOAVrvEkm14U7cwvAyphgaS/2kbwZ07ZamwqPz16Z2UQTjQW71FvnstVRpqbr6JUSstGRWmSl/hubP5pud/mwr1IoxLD+o+r7HVvB5PTVd7vbLy5csqCh7qieQzRvOdZ2ym1RjolrsDxVRNbax99YtqBvUQnNGzrOplBa0ikadKyNIgMmbPkzED5mZUt6+raOldz1oF2nDx2W5KBtKRMZRMldFF10KsGWwiznJfeO+20jTHqDGOE+LL6f+Ccuwta+imDnFKUrV72Ix81ThS8VXVA27QCKwsPyUeeI5423ekupFGHFK0VtIIIwix7M1aVVtwR75jq6r1YNx0jBmY6AYoPc8UMVJnCcgFIYGVWXytQVI9JjM5tHEoW8KyeP57QBDaV+uM5mmyTIW+I9gX2/Xxil0yi2xccfuLs3iSesuWmoOBejuUsKAdDelPKS3CpWjt80UmD2RB6BRXzSGMkGZgCKeE=
   skip_cleanup: true
   on:
     tags: true
